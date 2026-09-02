@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Sebagai Penyedia - SisaBaik</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#konten-utama">Lewati ke konten utama</a>
+
+    <header>
+      <p><strong>SisaBaik</strong></p>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li>
+            <a href="daftar-penyedia.html" aria-current="page"
+              >Daftar Sebagai Penyedia
+            </a>
+          </li>
+          <li><a href="tawarkan-makanan.html">Tawarkan Makanan</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten-utama" tabindex="-1">
+      <h1>Daftar Sebagai Penyedia Makanan</h1>
+      <p>
+        Gunakan data fiktif selama praktikum. Formulir ini belum terhubung ke
+        server dan basis data.
+      </p>
+      <p id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p>
+
+      <form
+        action="daftar-penyedia.html"
+        method="get"
+        aria-describedby="petunjuk-wajib"
+      >
+        <fieldset>
+          <legend>Penanggung jawab</legend>
+
+          <p>
+            <label for="nama-penanggung-jawab">Nama Lengkap *</label><br />
+            <input
+              type="text"
+              id="nama-penanggung-jawab"
+              name="nama_penanggung_jawab"
+              autocomplete="name"
+              minlength="3"
+              maxlength="100"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email">Alamat Email *</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              maxlength="245"
+              aria-describedby="bantuan-email"
+              required
+            /><br />
+            <small id="bantuan-email">COntoh: nama@usaha.example</small>
+          </p>
+
+          <p>
+            <label for="telepon">Nomor telepon *</label><br />
+            <input
+              type="tel"
+              id="telepon"
+              name="telepon"
+              autocomplete="tel"
+              inputmode="tel"
+              pattern="[0-9+]{8,20}"
+              aria-describedby="bantuan-telepon"
+              required
+            /><br />
+            <small id="bantuan-telepon">
+              Gunakan 8-20 karakter berupa angka,spasi, +, atau tanda kurung.
+            </small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Lokasi usaha</legend>
+
+          <p>
+            <label for="alamat">Alamat Lengkap *</label><br />
+            <textarea
+              id="alamat"
+              name="alamat"
+              rows="4"
+              autocomplete="street-address"
+              minlength="10"
+              maxlength="250"
+              required
+            ></textarea>
+          </p>
+
+          <p>
+            <label for="kota">Kabupaten atau kota *</label><br />
+            <input
+              type="text"
+              id="kota"
+              name="kota"
+              autocomplete="address-level2"
+              maxlength="100"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="provinsi">Provinsi *</label><br />
+            <input
+              type="text"
+              id="provinsi"
+              name="provinsi"
+              autocomplete="address-level1"
+              maxlength="100"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="kode-pos">Kode pos *</label><br />
+            <input
+              type="text"
+              id="kode-pos"
+              name="kode_pos"
+              autocomplete="postal-code"
+              inputmode="numeric"
+              pattern="[0-9]{5}"
+              maxlength="5"
+              required
+            /><br />
+            <small id="bantuan-kode-pos">Masukkan 5 digit angka</small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Persetujuan</legend>
+          <p>
+            <input
+              type="checkbox"
+              id="persetujuan"
+              name="persetujuan"
+              value="setuju"
+              required
+            />
+            <label for="persetujuan">
+              Saya menyatakan bahwa informasi latihan ini tidak menggunakan data
+              pribadi atau data usaha yang sebenarnya. *
+            </label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Kirim pendaftaran latihan</button>
+          <button type="reset">Kosongkan formulir</button>
+        </p>
+      </form>
+
+      <section aria-labelledby="catatan-prototipe">
+        <h2 id="catatan-prototipe">Apa yang terjadi setelah tombol kirim?</h2>
+        <p>
+          Browser memeriksa atribut validasi HTML terlebih dahulu. Jika semua
+          input valid, halaman dimuat ulang dan pasangan nama-nilai terlihat
+          pada alamat halaman. Data belum didimpan. Pada chapter backend, metode
+          sementara ini akan diganti dengan pengiriman ke server.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 SisaBaik - Proyek pembelajaran Pengembangan Web .< /p></p>
+    </footer>
+  </body>
+</html>
