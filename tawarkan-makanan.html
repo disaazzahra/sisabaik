@@ -58,7 +58,8 @@
           <p>
             <label for="kategori">Kategori *</label><br />
             <select id="kategori" name="kategori" required>
-              <option value="makanan-siap-saji">Makanan Siap Saji</option>
+              <option value="">Pilih kategori</option>
+              <option value="makanan-siap-saji">Makanan siap saji</option>
               <option value="roti-kue">Roti atau kue</option>
               <option value="buah-sayur">Buah atau Sayur</option>
               <option value="minuman">Minuman</option>
@@ -68,7 +69,7 @@
           </p>
         
           <P> 
-            <label for="deskripsi">Deskripsi kondisi makanan *</label><br />
+            <label for="deskripsi_makanan">Deskripsi kondisi makanan *</label><br/>
             <textarea
               id="deskripsi_makanan"
               name="deskripsi_makanan"
@@ -79,7 +80,8 @@
               required
             ></textarea><br>
             <small id="bantuan-deskripsi-makanan">
-              Jelaskan isi, kondisi, waktu produksi, dan alasan menjadi stok berlebih.</small>
+              Jelaskan isi, kondisi, waktu produksi, dan alasan menjadi stok berlebih.
+            </small>
           </p>
         </fieldset>
 
@@ -167,7 +169,6 @@
             harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya.
             </small>
             </p>
-            </fieldset>
 
         <fieldset>
         <legend>Keamanan dan pengambilan</legend>
