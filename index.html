@@ -6,13 +6,15 @@
 
     <meta
       name="description"
-      content="Formulir prototipe untuk mendaftarkan usaha sebagai penyedia makanan di SisaBaik."
+      content="SisaBaik membantu penyedia menawarkan makanan berlebih agar tetap bernilai, terjangkau, dan tidak terbuang."
     />
-
-    <title>Daftar Penyedia | SisaBaik</title>
+    <title>Beranda | SisaBaik</title>
 
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="app.js" defer></script>
   </head>
+
 
   <body>
     <a class="skip-link" href="#konten-utama"> Lewati ke konten utama </a>
@@ -26,6 +28,8 @@
             <li>
               <a href="index.html">Beranda</a>
             </li>
+
+            <li><a href="#cara-kerja">Cara Kerja</a></li>
 
             <li>
               <a href="daftar-penyedia.html" aria-current="page">
@@ -41,228 +45,104 @@
       </div>
     </header>
 
-    <main class="container" id="konten-utama" tabindex="-1">
-      <div class="page-heading">
-        <h1>Daftar sebagai penyedia SisaBaik</h1>
-
-        <p class="lead">
-          Gunakan data fiktif selama praktikum. Formulir ini belum terhubung ke
-          server dan basis data.
+    <main id="konten-utama" tabindex="-1">
+      <section class="hero" aria-labelledby="judul-utama">
+      <div class="container hero-layout">
+        <div>
+        <p class="eyebrow">Selamatlan makanan, pulihkan nilainya</p>
+        <h1 id="lead">Makanan berlebihkan masih dapat memberi manfaat</h1>
+        <p class="lead">SisaBaik mempertemukan penyedia yang memiliki stok makanan layak konsumsi stok makanan layak konsumsi dengan pembeli atau penerima yang membutuhkannya.</p>
         </p>
-
-        <p class="required-note" id="petunjuk-wajib">
-          Kolom bertanda <strong>*</strong> wajib diisi.
-        </p>
+        <div class="button-group">
+        <a class="button" href="daftar-penyedia.html">Mulai sebagai penyedia</a>
+        <a class="button-secondary" href="#penawaran-contoh">Lihat contoh penawaran</a>
+        </div>
       </div>
+      <aside class="hero-panel" aria-label="Ringkasan manfaat SisaBaik">
+        <strong>3 pihak</strong>
+        <p>Penyedia, pengguna, dan lingkungan memperoleh manfaat dari makanan yang tidak terbuang.</p>
+      </aside>
+      </section>
 
-      <form
-        class="form-card"
-        action="daftar-penyedia.html"
-        method="get"
-        aria-describedby="petunjuk-wajib"
-      >
-        <fieldset class="form-section">
-          <legend>Informasi usaha</legend>
+      <section class="section" id="cara-kerja" aria-labelledby="judul-cara-kerja">
+        <div class="container">
+          <h2 id="judul-cara-kerja">Cara Kerja</h2>
+          <p class="section-intro">Alur sederhana ini aka dikembangkan menjadi proses aplikasi penuh pada chapter berikutnya.</p>
+          <div class="step-grid">
+            <article class="card">
+              <span class="step-number" aria-hidden="true">1</span>
+              <h3>Daftarkan usaha</h3>
+              <p>Penyedia mencatat identitas dan informasi dasar usahanya.</p>
+            </article>
+            <article class="card">
+              <span class="step-number" aria-hidden="true">2</span>
+              <h3>Catat makanan</h3>
+              <p>Penyedia menjelaskan makanan berlebih yang masih layak konsumsi.</p>
+            </article>
+            <article class="card">
+              <span class="step-number" aria-hidden="true">3</span>
+              <h3>Atur pengembalian</h3>
+              <p>Pengguna memilih penawaran dan mengambilnya sesuai ketentuan.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-          <p>
-            <label for="nama-usaha">Nama usaha *</label><br />
+      <section class="section section-alt" aria-labelledby="judul-manfaat">
+        <div class="container">
+          <h2 id="judul-manfaat">Manfaat SisaBaik</h2>
+          <div class="benefit-grid">
+            <article class="card">
+              <h3>Untuk penyedia</h3>
+              <p>Memulihkan sebagian nilai stok, menjangkau pengguna baru, dan mencatat kontribusi pengurangan limbah pangan.</p>
+            </article>
+            <article class="card">
+              <h3>Untuk pembeli atau penerima</h3>
+              <p>Membuka akses terhadap makanan layak konsumsi dengan harga lebih terjangkau atau memulai penyaluran.</p>
+            </article>
+            <article class="card">
+              <h3>Untuk lingkungan dan masyarakat</h3>
+              <p>Mengurangi makanan yang terbuang dan mendorong konsumsi yang lebih bertanggung jawab.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <input
-              type="text"
-              id="nama-usaha"
-              name="nama_usaha"
-              autocomplete="organization"
-              minlength="3"
-              maxlength="100"
-              required
-            />
-          </p>
-
-          <p>
-            <label for="jenis-usaha">Jenis usaha *</label><br />
-
-            <select id="jenis-usaha" name="jenis_usaha" required>
-              <option value="">Pilih jenis usaha</option>
-              <option value="restoran">Restoran</option>
-              <option value="toko-roti">Toko roti</option>
-              <option value="katering">Katering</option>
-              <option value="ritel">Toko ritel</option>
-              <option value="hotel">Hotel atau penginapan</option>
-              <option value="lainnya">Lainnya</option>
-            </select>
-          </p>
-
-          <p>
-            <label for="deskripsi-usaha"> Deskripsi singkat usaha </label><br />
-
-            <textarea
-              id="deskripsi-usaha"
-              name="deskripsi_usaha"
-              rows="5"
-              maxlength="500"
-              aria-describedby="bantuan-deskripsi"
-            ></textarea
-            ><br />
-
-            <small id="bantuan-deskripsi">
-              Jelaskan jenis produk dan jam operasional, maksimal 500 karakter.
-            </small>
-          </p>
-        </fieldset>
-
-        <fieldset class="form-section">
-          <legend>Penanggung jawab</legend>
-
-          <p>
-            <label for="nama-penanggung-jawab"> Nama lengkap * </label><br />
-
-            <input
-              type="text"
-              id="nama-penanggung-jawab"
-              name="nama_penanggung_jawab"
-              autocomplete="name"
-              minlength="3"
-              maxlength="100"
-              required
-            />
-          </p>
-
-          <p>
-            <label for="email">Alamat email *</label><br />
-
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              maxlength="254"
-              aria-describedby="bantuan-email"
-              required
-            /><br />
-
-            <small id="bantuan-email"> Contoh: nama@usaha.example </small>
-          </p>
-
-          <p>
-            <label for="telepon">Nomor telepon *</label><br />
-
-            <input
-              type="tel"
-              id="telepon"
-              name="telepon"
-              autocomplete="tel"
-              inputmode="tel"
-              pattern="[0-9+() ]{8,20}"
-              aria-describedby="bantuan-telepon"
-              required
-            /><br />
-
-            <small id="bantuan-telepon">
-              Gunakan 8–20 karakter berupa angka, spasi, +, atau tanda kurung.
-            </small>
-          </p>
-        </fieldset>
-
-        <fieldset class="form-section">
-          <legend>Lokasi usaha</legend>
-
-          <p>
-            <label for="alamat">Alamat lengkap *</label><br />
-
-            <textarea
-              id="alamat"
-              name="alamat"
-              rows="4"
-              autocomplete="street-address"
-              minlength="10"
-              maxlength="250"
-              required
-            ></textarea>
-          </p>
-
-          <p>
-            <label for="kota">Kabupaten atau kota *</label><br />
-
-            <input
-              type="text"
-              id="kota"
-              name="kota"
-              autocomplete="address-level2"
-              maxlength="100"
-              required
-            />
-          </p>
-
-          <p>
-            <label for="provinsi">Provinsi *</label><br />
-
-            <input
-              type="text"
-              id="provinsi"
-              name="provinsi"
-              autocomplete="address-level1"
-              maxlength="100"
-              required
-            />
-          </p>
-
-          <p>
-            <label for="kode-pos">Kode pos *</label><br />
-
-            <input
-              type="text"
-              id="kode-pos"
-              name="kode_pos"
-              autocomplete="postal-code"
-              inputmode="numeric"
-              pattern="[0-9]{5}"
-              aria-describedby="bantuan-kode-pos"
-              required
-            /><br />
-
-            <small id="bantuan-kode-pos"> Masukkan tepat lima digit. </small>
-          </p>
-        </fieldset>
-
-        <fieldset class="form-section">
-          <legend>Persetujuan</legend>
-
-          <p>
-            <input
-              type="checkbox"
-              id="persetujuan"
-              name="persetujuan"
-              value="setuju"
-              required
-            />
-
-            <label for="persetujuan">
-              Saya menyatakan bahwa informasi latihan ini tidak menggunakan data
-              pribadi atau data usaha yang sebenarnya. *
-            </label>
-          </p>
-        </fieldset>
-
-        <p class="form-actions">
-          <button class="button" type="submit">
-            Kirim pendaftaran latihan
-          </button>
-
-          <button class="button button-secondary" type="reset">
-            Kosongkan formulir
-          </button>
-        </p>
-      </form>
-
-      <section class="section" aria-labelledby="catatan-prototipe">
-        <h2 id="catatan-prototipe">Apa yang terjadi setelah tombol dikirim?</h2>
-
-        <p>
-          Browser memeriksa atribut validasi HTML terlebih dahulu. Jika semua
-          input valid, halaman dimuat ulang dan pasangan nama-nilai terlihat
-          pada alamat halaman. Data belum disimpan. Pada chapter backend, metode
-          sementara ini akan diganti dengan pengiriman ke server.
-        </p>
+      <section class="section" id="penawaran-contoh" aria-labelledby="judul-penawaran">
+        <div class="container">
+          <h2 id="judul-penawaran">Contoh penawaran hari ini</h2>
+          <p class="selection-intro">Data fiktif dimuat dari JSON untuk latihan JavaScript.</p>
+          <form class="filter-panel" id="filter-form" role="search">
+            <p>
+              <label for="kata-kunci">Cara penawaran</label><br>
+              <input id="kata-kunci" name="kata_kunci" type="search" placeholder="Contoh: roti">
+            </p>
+            <p>
+              <label for="filter-kategori">Kategori</label><br>
+              <select id="filter-kategori" name="kategori">
+                <option value="semua">Semua kategori</option>
+                <option value="makanan-siap-saji">Makanan siap saji</option>
+                <option value="roti-kue">Roti dan kue</option>
+                <option value="buah-sayur">Buah dan sayur</option>
+              </select>
+            </p>
+          </form>
+          <p id="status-katalog" class="status-message" role="status" aria-live="polite">Membuat penawaran...</p>
+          <div class="offer-grid" id="daftar-penawaran"></div>
+          <aside class="cart-summary" aria labelledby="judul-ringkasan">
+            <h3 id="judul-ringkasan">Ringkasan pemesanaan</h3>
+            <p><span id="jumlah-item">0</span> item . total <strong id="total-pesanan">Rp0</strong></p>
+          </aside>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="judul-keamanan">
+        <div class="container">
+          <div class="notice">
+            <h2 id="judul-keamanan">Komitmen keamanan pangan</h2>
+            <p>SisaBaik hanya ditujukan untuk makanan yang layak konsumsi. Penyedia bertanggung jawab memberikan informasi kondisi, alergen, penyimpanan, dan batas waktu pengambilan secara jujur.</p>
+          </div>
+        </div>
       </section>
     </main>
 
