@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "Paket roti campur",
+    "nama": "Paket roti campur",
     "kategori": "roti-kue",
-    "label kategori": "Roti dan kue",
+    "labelKategori": "Roti dan kue",
     "penyedia": "Toko Roti Contoh",
-    "Stok": "8",
+    "stok": "8",
     "satuan": "paket",
     "hargaNormal": 25000,
     "hargaPenawaran": 10000,
@@ -13,11 +13,11 @@
   },
   {
     "id": 2,
-    "name": "Nasi dan lauk harian",
+    "nama": "Nasi dan lauk harian",
     "kategori": "makanan-siap-saji",
-    "label kategori": "Makanan Siap Saji",
+    "labelKategori": "Makanan Siap Saji",
     "penyedia": "Dapur Contoh",
-    "Stok": "6",
+    "stok": "6",
     "satuan": "porsi",
     "hargaNormal": 30000,
     "hargaPenawaran": 15000,
@@ -25,14 +25,38 @@
   },
   {
     "id": 3,
-    "name": "Paket buah matang",
+    "nama": "Paket buah matang",
     "kategori": "buah-sayur",
-    "label kategori": "Buah dan Sayur",
+    "labelKategori": "Buah dan Sayur",
     "penyedia": "Toko Buah Contoh",
-    "Stok": "4",
+    "stok": "4",
     "satuan": "paket",
     "hargaNormal": 0,
     "hargaPenawaran": 10000,
+    "batas": "2026-09-03T18:00:00+07:00"
+  },
+  {
+    "id": 4,
+    "nama": "Susu UHT",
+    "kategori": "Minuman",
+    "labelKategori": "Minuman",
+    "penyedia": "Toko kelontong Contoh",
+    "stok": "12",
+    "satuan": "kotak",
+    "hargaNormal": 7000,
+    "hargaPenawaran": 5000,
+    "batas": "2026-09-03T18:00:00+07:00"
+  },
+  {
+    "id": 5,
+    "nama": "Yogurt Buah",
+    "kategori": "Minuman",
+    "labelKategori": "Minuman",
+    "penyedia": "Toko kelontong Contoh",
+    "stok": "8",
+    "satuan": "kotak",
+    "hargaNormal": 12000,
+    "hargaPenawaran": 6000,
     "batas": "2026-09-03T18:00:00+07:00"
   }
 ]
